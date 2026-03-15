@@ -16,7 +16,7 @@ The frontend dynamically displays recipe data, supports authenticated user actio
 
 ---
 
-# 👥 Team Members
+## 👥 Team Members
 
 | Name | ID |
 |-----|-----|
@@ -26,47 +26,47 @@ The frontend dynamically displays recipe data, supports authenticated user actio
 
 ---
 
-# 🏗 System Architecture
+## 🏗 System Architecture
 
 The system follows a **client–server architecture**.
-Frontend (Vue.js)
-│
-│ HTTP Requests (Axios)
-▼
-Backend REST API (Node.js + Express)
-│
-│ SQL Queries
-▼
-MySQL Database
-│
-│ External API
-▼
-Spoonacular Recipe API
 
+```
+Frontend (Vue.js)
+        │
+        │ HTTP Requests (Axios)
+        ▼
+Backend REST API (Node.js + Express)
+        │
+        │ SQL Queries
+        ▼
+MySQL Database
+        │
+        │ External API Requests
+        ▼
+Spoonacular Recipe API
+```
 
 ### Frontend Responsibilities
 
-- Rendering the user interface  
-- Handling client-side routing  
-- Managing UI state  
-- Sending API requests to the backend  
-- Dynamically rendering recipe data  
+- Rendering the user interface
+- Handling client-side routing
+- Managing UI state
+- Sending API requests to the backend
+- Dynamically rendering recipe data
 
 ### Backend Responsibilities
 
-- Authentication and session management  
-- Database access and persistence  
-- Business logic and API orchestration  
-- Integration with external recipe services  
+- Authentication and session management
+- Database access and persistence
+- Business logic and API orchestration
+- Integration with external recipe services
 
 ---
 
-# ✨ Main Features
-
-The application supports a range of features designed for recipe exploration and management.
+## ✨ Main Features
 
 ### 🔎 Recipe Search
-Users can search for recipes using filters such as cuisine, diet, and intolerances.
+Search recipes using filters such as cuisine, diet, and intolerances.
 
 ### 📖 Recipe View
 Detailed recipe pages displaying ingredients, preparation steps, and additional metadata.
@@ -88,9 +88,9 @@ Tracks recipes previously viewed by the user.
 
 ---
 
-# 🛠 Technology Stack
+## 🛠 Technology Stack
 
-## Frontend
+### Frontend
 
 - Vue.js 3  
 - Vue Router  
@@ -99,68 +99,110 @@ Tracks recipes previously viewed by the user.
 - BootstrapVue3  
 - Vue Toastification  
 
-## Backend
+### Backend
 
 - Node.js  
 - Express.js  
 - MySQL  
 - REST API  
 
-## External Integration
+### External Integration
 
 - Spoonacular Recipe API
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
+
+```
 src
 │
 ├── components
-│ ├── RecipePreview.vue
-│ ├── RecipePreviewList.vue
-│ ├── SearchForm.vue
-│ ├── SearchResults.vue
-│ ├── CreateRecipeForm.vue
-│ └── MealSection.vue
+│   ├── RecipePreview.vue
+│   ├── RecipePreviewList.vue
+│   ├── SearchForm.vue
+│   ├── SearchResults.vue
+│   ├── CreateRecipeForm.vue
+│   └── MealSection.vue
 │
 ├── pages
-│ ├── MainPage.vue
-│ ├── LoginPage.vue
-│ ├── RegisterPage.vue
-│ ├── SearchPage.vue
-│ ├── RecipeViewPage.vue
-│ ├── FavoriteRecipesPage.vue
-│ ├── MyRecipesPage.vue
-│ ├── FamilyRecipesPage.vue
-│ ├── MealPlanPage.vue
-│ └── NotFoundPage.vue
+│   ├── MainPage.vue
+│   ├── LoginPage.vue
+│   ├── RegisterPage.vue
+│   ├── SearchPage.vue
+│   ├── RecipeViewPage.vue
+│   ├── FavoriteRecipesPage.vue
+│   ├── MyRecipesPage.vue
+│   ├── FamilyRecipesPage.vue
+│   ├── MealPlanPage.vue
+│   └── NotFoundPage.vue
 │
 ├── router
-│ └── index.js
+│   └── index.js
 │
 ├── store.js
 ├── constants.js
 ├── main.js
 └── App.vue
+```
+
 The frontend follows a **component-based architecture**, separating reusable UI components from full application views.
 
 ---
 
-# 🔗 Backend Integration
+## 🔗 Backend Integration
 
 The frontend communicates with the backend using **Axios** for REST API requests.
 
 During local development, the backend server runs at:
+
+```
 http://localhost:3000
+```
 
-🚀 Future Improvements
+The backend handles authentication, database operations, and integration with the Spoonacular API.
 
-Possible extensions include:
+---
 
-Improved mobile responsiveness
+## 🧱 Local Setup
 
-Advanced recipe filtering
+### Requirements
 
-User profile management
+- Node.js 18.x
+- npm
+- A running instance of the backend server
 
-Performance optimizations
+### Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/ParparovLiel/Grandma-s-Recipes-frontend.git
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start the development server:
+
+```
+npm run serve
+```
+
+The application will run at:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🚀 Future Improvements
+
+- Improved mobile responsiveness
+- Advanced recipe filtering
+- User profile management
+- Performance optimizations

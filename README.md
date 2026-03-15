@@ -142,8 +142,6 @@ src
 ├── constants.js
 ├── main.js
 └── App.vue
-
-
 The frontend follows a **component-based architecture**, separating reusable UI components from full application views.
 
 ---
